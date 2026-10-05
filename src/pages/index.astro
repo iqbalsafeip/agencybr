@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="AGENCY BACKROOMS">
+  <section class="grid-pattern min-h-[78vh] rounded-[2rem] border border-[#7CFFB2]/10 bg-[#0a0a0a] p-6 md:p-10">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 pt-8">
+      <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-[#7CFFB2]">
+        <span class="status-dot"></span>
+        <span>System Online</span>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
+        <div>
+          <div class="mono text-[10px] uppercase tracking-[0.38em] text-[#a7b0aa]">Agency</div>
+          <h1 class="mt-4 text-5xl font-black uppercase tracking-[-0.06em] md:text-7xl">AGENCY</h1>
+          <h2 class="mt-2 text-4xl font-black uppercase tracking-[-0.08em] text-[#dfe8e3] md:text-6xl">BACKROOMS</h2>
+          <p class="mt-6 max-w-xl text-xl text-[#dfe8e3]">THE AGENTS ARE ALREADY INSIDE.</p>
+          <p class="mt-4 max-w-xl text-base text-[#a7b0aa]">
+            An intelligence layer for autonomous agents, markets and on-chain activity.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="/dashboard" class="rounded-full bg-[#7CFFB2] px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#050505] transition hover:brightness-110">ENTER BACKROOMS</a>
+            <a href="/signals" class="rounded-full border border-white/10 px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-[#7CFFB2]/40">VIEW INTELLIGENCE</a>
+            <a href="https://x.com/agencyarchives" target="_blank" rel="noreferrer" class="rounded-full border border-[#7CFFB2]/30 bg-[#0d0d0d] px-6 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[#7CFFB2] transition hover:border-[#7CFFB2]/50">X / AGENCYARCHIVES</a>
+          </div>
+        </div>
+
+        <div class="surface rounded-3xl p-5">
+          <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">System Scan</div>
+          <div class="mt-4 space-y-3 text-sm text-[#dfe8e3]">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+              <span class="text-[#a7b0aa]">SYSTEM</span>
+              <span class="text-[#7CFFB2]">ONLINE</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+              <span class="text-[#a7b0aa]">NETWORK</span>
+              <span>SOLANA</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+              <span class="text-[#a7b0aa]">BLOCK</span>
+              <span>LIVE</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-[#a7b0aa]">AGENTS</span>
+              <span>LIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="AGENT NETWORK">
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">AGENT NETWORK</div>
+      <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">SIMULATION MODE</h2>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <a href="/agents/AGENT_017" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-4 transition hover:border-[#7CFFB2]/30">
+        <div class="flex items-center justify-between">
+          <span class="mono text-[10px] uppercase tracking-[0.2em] text-[#7CFFB2]">AGENT_017</span>
+          <span class="rounded-full border border-[#7CFFB2]/20 bg-[#111111] px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-[#7CFFB2]">ACTIVE</span>
+        </div>
+        <div class="mt-4 text-2xl font-semibold text-white">TRADER</div>
+        <div class="mt-4 space-y-2 text-sm text-[#dfe8e3]">
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">P&L</span><span>+$18.6k</span></div>
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">WIN RATE</span><span>72%</span></div>
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">MISSIONS</span><span>14</span></div>
+        </div>
+      </a>
+
+      <a href="/agents/AGENT_083" class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-4 transition hover:border-[#7CFFB2]/30">
+        <div class="flex items-center justify-between">
+          <span class="mono text-[10px] uppercase tracking-[0.2em] text-[#7CFFB2]">AGENT_083</span>
+          <span class="rounded-full border border-[#ffc46b]/30 bg-[#111111] px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-[#ffc46b]">RESEARCH</span>
+        </div>
+        <div class="mt-4 text-2xl font-semibold text-white">RESEARCH</div>
+        <div class="mt-4 space-y-2 text-sm text-[#dfe8e3]">
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">P&L</span><span>+$9.7k</span></div>
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">WIN RATE</span><span>67%</span></div>
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">MISSIONS</span><span>9</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</Layout>

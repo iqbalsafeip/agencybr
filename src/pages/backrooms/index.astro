@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { BackroomRoom } from '../../components/backrooms/BackroomRoom';
+---
+
+<Layout title="BACKROOMS">
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">The rooms</div>
+      <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">Atmospheric intelligence</h2>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <a href="/backrooms/OBSERVATION"><BackroomRoom roomId="ROOM_01" title="OBSERVATION" status="STABLE" /></a>
+      <a href="/backrooms/SIGNALS"><BackroomRoom roomId="ROOM_02" title="SIGNALS" status="MONITORING" /></a>
+      <a href="/backrooms/TREASURY"><BackroomRoom roomId="ROOM_03" title="TREASURY" status="MANAGED" /></a>
+      <a href="/backrooms/AGENTS"><BackroomRoom roomId="ROOM_04" title="AGENTS" status="ACTIVE" /></a>
+      <a href="/backrooms/UNKNOWN"><BackroomRoom roomId="ROOM_05" title="UNKNOWN" status="CLASSIFIED" locked /></a>
+    </div>
+  </div>
+</Layout>

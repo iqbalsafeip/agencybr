@@ -1,0 +1,21 @@
+---
+const { title = 'Agency Backrooms' } = Astro.props;
+---
+
+<header class="sticky top-0 z-20 border-b border-white/10 bg-[#070707]/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+    <div>
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">System</div>
+      <h1 class="text-sm font-semibold uppercase tracking-[0.22em] text-white">{title}</h1>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden items-center gap-2 rounded-full border border-[#7CFFB2]/20 bg-[#111111] px-3 py-1.5 md:flex">
+        <span class="status-dot"></span>
+        <span class="mono text-[10px] uppercase tracking-[0.2em] text-[#7CFFB2]">SOLANA LIVE</span>
+      </div>
+      <a href="https://x.com/agencyarchives" target="_blank" rel="noreferrer" class="rounded-full border border-[#7CFFB2]/20 bg-[#0d0d0d] px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-[#7CFFB2] transition hover:border-[#7CFFB2]/40">X</a>
+      <a href="/" class="rounded-full border border-white/10 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-white hover:border-[#7CFFB2]/30">Home</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="WALLET INTELLIGENCE">
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">Wallet Intelligence</div>
+      <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">Real Solana data only</h2>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-4">
+      <div class="flex items-center justify-between gap-3">
+        <div>
+          <div class="mono text-[10px] uppercase tracking-[0.22em] text-[#a7b0aa]">Wallet</div>
+          <div class="mt-2 text-lg font-semibold text-white">7F31...MzQ9</div>
+        </div>
+        <div class="flex gap-2">
+          <button class="rounded-full border border-white/10 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-white">Copy</button>
+          <a href="/wallets/7F31...MzQ9" class="rounded-full border border-[#7CFFB2]/30 px-3 py-2 text-[10px] uppercase tracking-[0.2em] text-[#7CFFB2]">Open</a>
+        </div>
+      </div>
+
+      <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <div class="metric-card"><div class="mono text-[9px] uppercase tracking-[0.2em] text-[#a7b0aa]">SOL BALANCE</div><div class="mt-2 text-2xl font-semibold">42.87</div></div>
+        <div class="metric-card"><div class="mono text-[9px] uppercase tracking-[0.2em] text-[#a7b0aa]">TOKEN BALANCES</div><div class="mt-2 text-2xl font-semibold">3</div></div>
+        <div class="metric-card"><div class="mono text-[9px] uppercase tracking-[0.2em] text-[#a7b0aa]">INTERACTIONS</div><div class="mt-2 text-2xl font-semibold">21</div></div>
+      </div>
+    </div>
+  </div>
+</Layout>

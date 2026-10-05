@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="SIGNAL FEED">
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">Signal Feed</div>
+      <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">HEURISTIC SIGNALS</h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="rounded-2xl border border-[#7CFFB2]/20 bg-[#0d0d0d] p-4">
+        <div class="flex items-center justify-between">
+          <div class="mono text-[9px] uppercase tracking-[0.2em] text-[#7CFFB2]">WHALE MOVEMENT</div>
+          <div class="rounded-full border border-white/10 px-2 py-1 text-[9px] uppercase tracking-[0.18em] text-[#ffc46b]">HIGH</div>
+        </div>
+        <div class="mt-3 text-lg font-semibold text-white">$AGENCY / 18.2k moved</div>
+        <div class="mt-2 text-sm text-[#dfe8e3]">Large wallet moved liquidity through a clustered routing pattern. Confidence 86%. Model generated signal.</div>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-[#0d0d0d] p-4">
+        <div class="flex items-center justify-between">
+          <div class="mono text-[9px] uppercase tracking-[0.2em] text-[#7CFFB2]">VOLUME SPIKE</div>
+          <div class="rounded-full border border-white/10 px-2 py-1 text-[9px] uppercase tracking-[0.18em] text-[#7CFFB2]">MEDIUM</div>
+        </div>
+        <div class="mt-3 text-lg font-semibold text-white">SOL / Volume surge</div>
+        <div class="mt-2 text-sm text-[#dfe8e3]">Velocity increased across the pair after a rebalancing event. Heuristic signal only; no guaranteed forecast.</div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const { address } = Astro.params;
+
+export function getStaticPaths() {
+  return [{ params: { address: '7F31...MzQ9' } }];
+}
+---
+
+<Layout title={address ?? 'WALLET'}>
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <div class="mono text-[10px] uppercase tracking-[0.24em] text-[#a7b0aa]">Wallet</div>
+          <h2 class="mt-2 text-2xl font-semibold text-white">{address}</h2>
+        </div>
+        <div class="status-indicator"><span class="status-dot"></span> live</div>
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">SOL BALANCE</div><div class="mt-2 text-2xl font-semibold">42.87</div></div>
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">TOKEN VALUE</div><div class="mt-2 text-2xl font-semibold">$32.1k</div></div>
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">TXNS</div><div class="mt-2 text-2xl font-semibold">21</div></div>
+    </div>
+
+    <div class="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+      <div class="surface rounded-2xl p-5">
+        <div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">Recent Transactions</div>
+        <div class="mt-4 space-y-3 text-sm text-[#dfe8e3]">
+          <div class="flex justify-between border-b border-white/10 pb-2"><span>Token movement</span><span>+1200 $AGENCY</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-2"><span>Swap</span><span>-0.31 SOL</span></div>
+          <div class="flex justify-between"><span>Agent event</span><span>+1.24 SOL</span></div>
+        </div>
+      </div>
+
+      <div class="surface rounded-2xl p-5">
+        <div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">Explorer</div>
+        <div class="mt-4 space-y-3 text-sm text-[#dfe8e3]">
+          <a href="https://solscan.io/account/7F31qXr8C5bK9mN2W4yVd7A6Z8jT3fL2cP1Q6nR9mK4" target="_blank" class="block rounded-xl border border-[#7CFFB2]/20 bg-[#0d0d0d] p-3 text-[#7CFFB2]">Open explorer</a>
+          <button class="w-full rounded-xl border border-white/10 bg-[#0d0d0d] p-3 text-left text-white">Refresh wallet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const { id } = Astro.params;
+
+export function getStaticPaths() {
+  return [{ params: { id: 'AGENT_017' } }, { params: { id: 'AGENT_083' } }];
+}
+---
+
+<Layout title={id ?? 'AGENT PROFILE'}>
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div class="mono text-[10px] uppercase tracking-[0.24em] text-[#7CFFB2]">{id}</div>
+          <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">STATUS ACTIVE</h2>
+        </div>
+        <div class="status-indicator"><span class="status-dot"></span> live</div>
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">TREASURY</div><div class="mt-2 text-2xl font-semibold">$128.5k</div></div>
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">P&L</div><div class="mt-2 text-2xl font-semibold">+$18.6k</div></div>
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">WIN RATE</div><div class="mt-2 text-2xl font-semibold">72%</div></div>
+      <div class="metric-card"><div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">REPUTATION</div><div class="mt-2 text-2xl font-semibold">94</div></div>
+    </div>
+
+    <div class="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+      <div class="surface rounded-2xl p-5">
+        <div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">Overview</div>
+        <div class="mt-4 space-y-3 text-sm text-[#dfe8e3]">
+          <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-[#a7b0aa]">TYPE</span><span>TRADER</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-[#a7b0aa]">MISSIONS</span><span>14</span></div>
+          <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-[#a7b0aa]">WALLET</span><a href="/wallets/7F31...MzQ9" class="text-[#7CFFB2] hover:underline">7F31...MzQ9</a></div>
+          <div class="flex justify-between"><span class="text-[#a7b0aa]">LAST ACTIVITY</span><span>2 min ago</span></div>
+        </div>
+      </div>
+
+      <div class="surface rounded-2xl p-5">
+        <div class="mono text-[10px] uppercase tracking-[0.2em] text-[#a7b0aa]">Performance</div>
+        <div class="mt-4 space-y-3">
+          <div class="rounded-xl border border-white/10 bg-[#0d0d0d] p-3">
+            <div class="text-sm text-[#a7b0aa]">Signal confidence</div>
+            <div class="mt-2 text-xl font-semibold text-white">86%</div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-[#0d0d0d] p-3">
+            <div class="text-sm text-[#a7b0aa]">Trade velocity</div>
+            <div class="mt-2 text-xl font-semibold text-white">32 ops / hr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

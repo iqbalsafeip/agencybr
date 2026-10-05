@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const { room } = Astro.params;
+
+export function getStaticPaths() {
+  return [
+    { params: { room: 'OBSERVATION' } },
+    { params: { room: 'SIGNALS' } },
+    { params: { room: 'TREASURY' } },
+    { params: { room: 'AGENTS' } },
+    { params: { room: 'UNKNOWN' } },
+  ];
+}
+---
+
+<Layout title={room ?? 'ROOM'}>
+  <div class="space-y-6">
+    <div class="surface rounded-2xl p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.28em] text-[#a7b0aa]">{room}</div>
+      <h2 class="mt-2 text-3xl font-semibold uppercase tracking-wide text-white">ACCESS 82%</h2>
+    </div>
+
+    <div class="rounded-2xl border border-[#ff6b6b]/20 bg-[#0d0d0d] p-5">
+      <div class="mono text-[10px] uppercase tracking-[0.22em] text-[#ff6b6b]">CLASSIFIED</div>
+      <p class="mt-4 text-lg text-[#dfe8e3]">“Something has been watching the agents.”</p>
+    </div>
+  </div>
+</Layout>
